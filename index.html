@@ -21,20 +21,20 @@
             margin: 0;
             padding: 0;
         }
-        /* Sleek Glass Bar Effect */
-        .glass-bar {
+        /* Glassmorphism Small Icon Box */
+        .glass-icon-box {
             background: rgba(255, 255, 255, 0.04);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .glass-bar:hover {
+        .glass-icon-box:hover {
             background: rgba(255, 255, 255, 0.09);
             border-color: rgba(56, 189, 248, 0.4);
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px 0 rgba(56, 189, 248, 0.15);
+            box-shadow: 0 8px 25px 0 rgba(56, 189, 248, 0.2);
         }
         /* Moon Glow Animation */
         @keyframes pulseGlow {
@@ -71,7 +71,7 @@
     <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-sky-900/20 rounded-full blur-3xl pointer-events-none"></div>
 
     <!-- Main Container Card -->
-    <main class="w-full max-w-sm z-10 flex flex-col items-center mx-auto">
+    <main class="w-full max-w-xs z-10 flex flex-col items-center mx-auto">
 
         <!-- Profile Section -->
         <div class="text-center mb-8 w-full flex flex-col items-center">
@@ -88,63 +88,43 @@
             </h1>
         </div>
 
-        <!-- Links Bars Container -->
-        <div class="w-full flex flex-col gap-3">
+        <!-- Icons Grid Container (Compact & Clean) -->
+        <div class="w-full grid grid-cols-2 gap-4">
 
-            <!-- X (Twitter) Bar -->
+            <!-- X (Twitter) Icon Link (With Bright White Logo) -->
             <a href="https://x.com/s_arn77?s=11" target="_blank" rel="noopener noreferrer" 
-               class="glass-bar rounded-2xl px-4 py-3.5 flex items-center justify-between group">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-black/50 border border-white/10 flex items-center justify-center text-white text-sm group-hover:scale-110 transition-transform">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </div>
-                    <span class="font-semibold text-sm text-slate-200 group-hover:text-white transition-colors">منصة إكس</span>
+               class="glass-icon-box rounded-2xl p-4 flex flex-col items-center justify-center gap-2 group">
+                <div class="w-12 h-12 rounded-xl bg-slate-900/80 border border-white/15 flex items-center justify-center text-white text-xl group-hover:scale-110 group-hover:border-white/40 transition-all">
+                    <i class="fa-brands fa-x-twitter text-white"></i>
                 </div>
-                <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-white/10 group-hover:text-white transition-all">
-                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
-                </div>
+                <span class="text-xs font-semibold text-slate-300 group-hover:text-white transition-colors">إكس</span>
             </a>
 
-            <!-- TikTok Bar -->
+            <!-- TikTok Icon Link -->
             <a href="https://www.tiktok.com/@s_arn77" target="_blank" rel="noopener noreferrer" 
-               class="glass-bar rounded-2xl px-4 py-3.5 flex items-center justify-between group">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-sm group-hover:scale-110 transition-transform">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </div>
-                    <span class="font-semibold text-sm text-slate-200 group-hover:text-pink-400 transition-colors">تيك توك</span>
+               class="glass-icon-box rounded-2xl p-4 flex flex-col items-center justify-center gap-2 group">
+                <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-xl group-hover:scale-110 group-hover:border-pink-500/40 transition-all">
+                    <i class="fa-brands fa-tiktok"></i>
                 </div>
-                <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-white/10 group-hover:text-white transition-all">
-                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
-                </div>
+                <span class="text-xs font-semibold text-slate-300 group-hover:text-pink-400 transition-colors">تيك توك</span>
             </a>
 
-            <!-- Snapchat Bar -->
+            <!-- Snapchat Icon Link -->
             <a href="https://www.snapchat.com/add/s_arn77?share_id=d11fyDMGSPOh6Cl8KtllyA&locale=ar_SA@calendar=gregorian;numbers=latn" target="_blank" rel="noopener noreferrer" 
-               class="glass-bar rounded-2xl px-4 py-3.5 flex items-center justify-between group">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 text-sm group-hover:scale-110 transition-transform">
-                        <i class="fa-brands fa-snapchat"></i>
-                    </div>
-                    <span class="font-semibold text-sm text-slate-200 group-hover:text-yellow-400 transition-colors">سناب شات</span>
+               class="glass-icon-box rounded-2xl p-4 flex flex-col items-center justify-center gap-2 group">
+                <div class="w-12 h-12 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 text-xl group-hover:scale-110 group-hover:border-yellow-400/40 transition-all">
+                    <i class="fa-brands fa-snapchat"></i>
                 </div>
-                <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-white/10 group-hover:text-white transition-all">
-                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
-                </div>
+                <span class="text-xs font-semibold text-slate-300 group-hover:text-yellow-400 transition-colors">سناب شات</span>
             </a>
 
-            <!-- WhatsApp Bar -->
+            <!-- WhatsApp Icon Link -->
             <a href="https://wa.me/966569557991?s=p" target="_blank" rel="noopener noreferrer" 
-               class="glass-bar rounded-2xl px-4 py-3.5 flex items-center justify-between group">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm group-hover:scale-110 transition-transform">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <span class="font-semibold text-sm text-slate-200 group-hover:text-emerald-400 transition-colors">واتساب</span>
+               class="glass-icon-box rounded-2xl p-4 flex flex-col items-center justify-center gap-2 group">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl group-hover:scale-110 group-hover:border-emerald-500/40 transition-all">
+                    <i class="fa-brands fa-whatsapp"></i>
                 </div>
-                <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-white/10 group-hover:text-white transition-all">
-                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
-                </div>
+                <span class="text-xs font-semibold text-slate-300 group-hover:text-emerald-400 transition-colors">واتساب</span>
             </a>
 
         </div>
@@ -160,28 +140,24 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const container = document.getElementById("stars-container");
-            const starCount = 35; // تقليل العدد قليلاً ليكون خفيفاً على الجوال
+            const starCount = 35;
 
             for (let i = 0; i < starCount; i++) {
                 const star = document.createElement("div");
                 star.className = "star";
                 
-                // Random positioning (ضمان عدم خروجها عن عرض الشاشة)
                 const x = Math.random() * 98;
                 const y = Math.random() * 100;
                 star.style.left = `${x}%`;
                 star.style.top = `${y}%`;
 
-                // Random size
                 const size = Math.random() * 2 + 1;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
 
-                // Random animation duration
                 const duration = Math.random() * 3 + 2;
                 star.style.setProperty("--duration", `${duration}s`);
 
-                // Random animation delay
                 star.style.animationDelay = `${Math.random() * 3}s`;
 
                 container.appendChild(star);
