@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>s_arn77 | روابط التواصل</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,36 +11,38 @@
     <!-- Google Fonts: Cairo -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
             font-family: 'Cairo', sans-serif;
             background-color: #030712;
             color: #f3f4f6;
-            overflow-x: hidden;
             margin: 0;
             padding: 0;
         }
-        /* Glassmorphism Icon Button */
-        .glass-icon-btn {
-            background: rgba(255, 255, 255, 0.05);
+        /* Sleek Glass Bar Effect */
+        .glass-bar {
+            background: rgba(255, 255, 255, 0.04);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .glass-icon-btn:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px 0 rgba(56, 189, 248, 0.3);
+        .glass-bar:hover {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px 0 rgba(56, 189, 248, 0.15);
         }
         /* Moon Glow Animation */
         @keyframes pulseGlow {
             0%, 100% {
-                box-shadow: 0 0 30px rgba(147, 197, 253, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
+                box-shadow: 0 0 25px rgba(147, 197, 253, 0.15), inset 0 0 15px rgba(255, 255, 255, 0.1);
             }
             50% {
-                box-shadow: 0 0 50px rgba(147, 197, 253, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0 45px rgba(147, 197, 253, 0.35), inset 0 0 25px rgba(255, 255, 255, 0.2);
             }
         }
         .moon-glow {
@@ -57,81 +59,91 @@
             0%, 100% { opacity: 0.2; transform: scale(0.8); }
             50% { opacity: 1; transform: scale(1.2); }
         }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #030712;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1f2937;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #374151;
-        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-between relative selection:bg-sky-500 selection:text-white py-12 px-4">
+<body class="min-h-screen flex flex-col items-center justify-between relative selection:bg-sky-500 selection:text-white py-12 px-4 box-border">
 
     <!-- Background Stars Container -->
     <div id="stars-container" class="absolute inset-0 overflow-hidden pointer-events-none z-0"></div>
 
     <!-- Background Ambient Glows -->
-    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-indigo-900/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-sky-900/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/4 -left-20 w-72 h-72 bg-indigo-900/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-sky-900/20 rounded-full blur-3xl pointer-events-none"></div>
 
     <!-- Main Container Card -->
-    <main class="w-full max-w-md z-10 flex flex-col items-center">
+    <main class="w-full max-w-sm z-10 flex flex-col items-center mx-auto">
 
         <!-- Profile Section -->
-        <div class="text-center mb-10 w-full flex flex-col items-center">
+        <div class="text-center mb-8 w-full flex flex-col items-center">
             <!-- Moon Avatar with glowing effect -->
-            <div class="relative w-32 h-32 mb-5 rounded-full overflow-hidden moon-glow border-2 border-white/20 p-1 bg-slate-900">
+            <div class="relative w-28 h-28 mb-4 rounded-full overflow-hidden moon-glow border-2 border-white/20 p-1 bg-slate-900">
                 <img src="moon.jpg" alt="s_arn77 Moon Avatar" class="w-full h-full object-cover rounded-full transform hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/400x400/0f172a/ffffff?text=s_arn77'">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
             </div>
 
             <!-- Username & Badge -->
-            <h1 class="text-2xl sm:text-3xl font-bold text-white tracking-wide flex items-center justify-center gap-2">
+            <h1 class="text-2xl font-bold text-white tracking-wide flex items-center justify-center gap-2">
                 s_arn77
-                <span class="text-sky-400 text-lg" title="موثق"><i class="fa-solid fa-circle-check"></i></span>
+                <span class="text-sky-400 text-base" title="موثق"><i class="fa-solid fa-circle-check"></i></span>
             </h1>
         </div>
 
-        <!-- Icons Grid Container -->
-        <div class="w-full grid grid-cols-2 gap-4 max-w-xs mx-auto">
+        <!-- Links Bars Container -->
+        <div class="w-full flex flex-col gap-3">
 
-            <!-- X (Twitter) Icon Link -->
+            <!-- X (Twitter) Bar -->
             <a href="https://x.com/s_arn77?s=11" target="_blank" rel="noopener noreferrer" 
-               class="glass-icon-btn aspect-square rounded-3xl flex flex-col items-center justify-center gap-2 group">
-                <div class="w-16 h-16 rounded-2xl bg-black/40 border border-white/10 flex items-center justify-center text-white text-2xl group-hover:bg-black group-hover:border-white/30 group-hover:scale-110 transition-all duration-300">
-                    <i class="fa-brands fa-x-twitter"></i>
+               class="glass-bar rounded-2xl px-4 py-3.5 flex items-center justify-between group">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-black/50 border border-white/10 flex items-center justify-center text-white text-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                    <span class="font-semibold text-sm text-slate-200 group-hover:text-white transition-colors">منصة إكس</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-white/10 group-hover:text-white transition-all">
+                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
                 </div>
             </a>
 
-            <!-- TikTok Icon Link -->
+            <!-- TikTok Bar -->
             <a href="https://www.tiktok.com/@s_arn77" target="_blank" rel="noopener noreferrer" 
-               class="glass-icon-btn aspect-square rounded-3xl flex flex-col items-center justify-center gap-2 group">
-                <div class="w-16 h-16 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500/20 group-hover:scale-110 transition-all duration-300">
-                    <i class="fa-brands fa-tiktok"></i>
+               class="glass-bar rounded-2xl px-4 py-3.5 flex items-center justify-between group">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <span class="font-semibold text-sm text-slate-200 group-hover:text-pink-400 transition-colors">تيك توك</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-white/10 group-hover:text-white transition-all">
+                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
                 </div>
             </a>
 
-            <!-- Snapchat Icon Link -->
+            <!-- Snapchat Bar -->
             <a href="https://www.snapchat.com/add/s_arn77?share_id=d11fyDMGSPOh6Cl8KtllyA&locale=ar_SA@calendar=gregorian;numbers=latn" target="_blank" rel="noopener noreferrer" 
-               class="glass-icon-btn aspect-square rounded-3xl flex flex-col items-center justify-center gap-2 group">
-                <div class="w-16 h-16 rounded-2xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 text-2xl group-hover:bg-yellow-400/20 group-hover:scale-110 transition-all duration-300">
-                    <i class="fa-brands fa-snapchat"></i>
+               class="glass-bar rounded-2xl px-4 py-3.5 flex items-center justify-between group">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 text-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-snapchat"></i>
+                    </div>
+                    <span class="font-semibold text-sm text-slate-200 group-hover:text-yellow-400 transition-colors">سناب شات</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-white/10 group-hover:text-white transition-all">
+                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
                 </div>
             </a>
 
-            <!-- WhatsApp Icon Link -->
+            <!-- WhatsApp Bar -->
             <a href="https://wa.me/966569557991?s=p" target="_blank" rel="noopener noreferrer" 
-               class="glass-icon-btn aspect-square rounded-3xl flex flex-col items-center justify-center gap-2 group">
-                <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl group-hover:bg-emerald-500/20 group-hover:scale-110 transition-all duration-300">
-                    <i class="fa-brands fa-whatsapp"></i>
+               class="glass-bar rounded-2xl px-4 py-3.5 flex items-center justify-between group">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <span class="font-semibold text-sm text-slate-200 group-hover:text-emerald-400 transition-colors">واتساب</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-white/10 group-hover:text-white transition-all">
+                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
                 </div>
             </a>
 
@@ -140,7 +152,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-12 text-center text-xs text-slate-500 z-10">
+    <footer class="mt-10 text-center text-xs text-slate-500 z-10">
         <p>© 2026 s_arn77. جميع الحقوق محفوظة.</p>
     </footer>
 
@@ -148,20 +160,20 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const container = document.getElementById("stars-container");
-            const starCount = 50;
+            const starCount = 35; // تقليل العدد قليلاً ليكون خفيفاً على الجوال
 
             for (let i = 0; i < starCount; i++) {
                 const star = document.createElement("div");
                 star.className = "star";
                 
-                // Random positioning
-                const x = Math.random() * 100;
+                // Random positioning (ضمان عدم خروجها عن عرض الشاشة)
+                const x = Math.random() * 98;
                 const y = Math.random() * 100;
                 star.style.left = `${x}%`;
                 star.style.top = `${y}%`;
 
                 // Random size
-                const size = Math.random() * 2.5 + 1;
+                const size = Math.random() * 2 + 1;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
 
